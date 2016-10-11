@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maskImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="udu-Bd-TO7">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ePh-Hp-M3t"/>
+                                    <constraint firstAttribute="width" constant="240" id="kv0-tK-kCd"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flowers.png" translatesAutoresizingMaskIntoConstraints="NO" id="pyC-cy-Vsr">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="AOE-lO-e4R"/>
+                                    <constraint firstAttribute="width" constant="240" id="pce-SJ-opx"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKu-u6-3D1">
+                                <state key="normal" title="switch"/>
+                                <connections>
+                                    <action selector="switchImage" destination="BYZ-38-t0r" eventType="touchUpInside" id="eUL-VR-Um2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5N-NX-obN">
+                                <frame key="frameInset" minX="242" minY="461" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AcC-OH-VC1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4F9-EC-Sff">
+                                <frame key="frameInset" minX="75" minY="461" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="start rotate"/>
+                                <connections>
+                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hLw-NG-Iyk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pyC-cy-Vsr" firstAttribute="leading" secondItem="udu-Bd-TO7" secondAttribute="leading" id="3k0-vJ-t3R"/>
+                            <constraint firstItem="pyC-cy-Vsr" firstAttribute="top" secondItem="udu-Bd-TO7" secondAttribute="top" id="MSz-vP-60S"/>
+                            <constraint firstItem="pyC-cy-Vsr" firstAttribute="trailing" secondItem="udu-Bd-TO7" secondAttribute="trailing" id="P72-fC-X8j"/>
+                            <constraint firstItem="pyC-cy-Vsr" firstAttribute="bottom" secondItem="udu-Bd-TO7" secondAttribute="bottom" id="W6z-YD-nuX"/>
+                            <constraint firstItem="udu-Bd-TO7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XlH-bn-jQA"/>
+                            <constraint firstItem="SKu-u6-3D1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cWh-yG-ttL"/>
+                            <constraint firstItem="SKu-u6-3D1" firstAttribute="top" secondItem="udu-Bd-TO7" secondAttribute="bottom" constant="20" id="edc-1S-8mM"/>
+                            <constraint firstItem="udu-Bd-TO7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rYR-AL-INE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="udu-Bd-TO7" id="MNY-1g-5AT"/>
+                        <outlet property="toImageView" destination="pyC-cy-Vsr" id="UYI-sl-mrv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="flowers.png" width="409" height="658"/>
+        <image name="maskImage.png" width="364" height="348"/>
+    </resources>
+</document>
